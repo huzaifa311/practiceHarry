@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: black;
+        color: green;
+        font-family: monospace;
+        text-align: center;
+        padding-top: 100px;
+      }
+    </style>
+    <title>Hack Interface</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="display-4">Initializing Hack Program</h1>
+      <p id="output"></p>
+    </div>
+
+    <script>
+      async function fakeHacking() {
+        const outputElement = document.getElementById("output");
+        let a = prompt(
+          "Enter any socialmedia account of the person which data you want to hack"
+        );
+        const messages = [
+          "Hacking Anas Naeem Instagram......",
+          "Username found anasnaeem149.......",
+          "Connecting Facebook...",
+          "Facebook url: https://www.facebook.com/anas.naeem.9",
+          "Gathering personal data...",
+          "Father : Naeem...",
+          "Brother : Hamza...",
+          "Decrypting security protocols...",
+          "Accessing private messages...",
+          "Uploading malicious payload...",
+          "Displaying sensitive information...",
+          "Hacking complete",
+        ];
+
+        for (let i = 0; i < messages.length; i++) {
+          await new Promise((resolve) => setTimeout(resolve, 3000));
+          outputElement.innerHTML += messages[i] + "<br>";
+        }
+      }
+
+      fakeHacking();
+    </script>
+  </body>
+</html>

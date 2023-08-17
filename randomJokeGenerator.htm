@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <h1>Random Joke Generator</h1>
+    <button onclick="displayRandomJoke()">Tell me a joke</button>
+    <div id="jokeContainer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+
+    <script>
+        let jokes = [
+            `Why was the math book sad? Because it had too many problems.`,
+
+            `I told my wife she was drawing her eyebrows too high. She seemed surprised.`,
+
+            `Did you hear about the claustrophobic astronaut? He just needed a little space.`,
+
+            `I used to play piano by ear, but now I use my hands.`,
+
+            `Parallel lines have so much in common. It's a shame they'll never meet.`,
+
+            `Why don't skeletons fight each other? They don't have the guts.`,
+
+            `Why did the scarecrow win an award? Because he was outstanding in his field.`,
+
+            `Why don't scientists trust atoms? Because they make up everything!`,
+
+            `Why did the bicycle fall over? Because it was two-tired.`,
+
+            `I'm reading a book about anti-gravity. It's impossible to put down!`,
+
+            `How does a penguin build its house? Igloos it together!`,
+
+            `Why did the golfer bring two pairs of pants? In case he got a hole in one.`,
+
+            `How do you make a tissue dance? You put a little boogie in it.`,
+
+            `Why did the tomato turn red? Because it saw the salad dressing!`,
+
+            `What's orange and sounds like a parrot? A carrot!`,
+
+            `Why did the chicken go to the seance? To talk to the other side.`,
+
+            `How do you organize a space party? You planet!`,
+
+            `What do you call a bear with no teeth? A gummy bear.`,
+
+            `How do you catch a squirrel? Climb up in a tree and act like a nut!`,
+
+            `What do you call a can opener that doesn't work? A can't opener!`,
+
+            `Why don't some couples go to the gym? Because some relationships don't work out.`,
+
+            `Did you hear about the kidnapping at the park? They woke up!`,
+
+            `Why was the math book sad? Because it had too many problems.`,
+
+            `What do you call a fake noodle? An impasta!`,
+
+            `Why don't scientists trust stairs? Because they're always up to something.`
+        ]
+
+        function displayRandomJoke() {
+            let randomIndex = Math.floor(Math.random() * jokes.length);
+            let randomJoke = jokes[randomIndex];
+            let jokeContainer = document.getElementById("jokeContainer");
+            jokeContainer.innerText = randomJoke;
+        }
+
+        // Get the current time
+        const currentTime = new Date();
+
+        // Get the hour in 24-hour format
+        const hours24 = currentTime.getHours();
+
+        // Convert the hour to 12-hour format and determine if it's AM or PM
+        const hours12 = hours24 % 12 === 0 ? 12 : hours24 % 12; // Convert 0 to 12
+        const amPm = hours24 < 12 ? 'AM' : 'PM';
+
+        console.log(`Current time: ${hours12}:${currentTime.getMinutes()}:${currentTime.getSeconds()} ${amPm}`);
+
+    </script>
+</body>
+
+</html>
